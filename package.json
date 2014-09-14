@@ -1,0 +1,22 @@
+{
+  "name": "DashboardMembership",
+  "version": "0.0.1",
+  "description": "Provides the membership capability",
+  "keywords": [
+    "Dashboard",
+    "Membership",
+    "iGoogle"
+  ],
+  "author": {
+    "name": "Manjesh Gowda",
+    "email": "manjesh.2j@gmail.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-watch": "*",
+    "should": "*",
+    "mocha": "*"
+  }
+}
