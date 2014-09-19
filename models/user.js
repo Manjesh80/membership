@@ -7,10 +7,16 @@ var assert = require("assert");
 var utility = require("../lib/utility");
 
 var User = function(args){
-    assert.ok(args.email, "Email is required");
+
     var user = { };
 
     user.email = args.email;
+    user.id = args.id;
+    user.name = args.name;
+    user.displayName = args.displayName;
+
+    user.authenticationToken = args.authenticationToken || utility.authenticationToken;
+
     user.createdAt = args.createdAt || new Date();
     user.status = args.status || "pending";
     user.signInCount = args.signInCount || 0;
@@ -19,7 +25,8 @@ var User = function(args){
     user.currentSessionToken = args.currentSessionToken || null;
     user.reminderSentAt = args.reminderSentAt || null;
     user.reminderToken = args.reminderToken || null;
-    user.authenticationToken = args.authenticationToken || utility.authenticationToken;
+
+
 
     return user;
 };
